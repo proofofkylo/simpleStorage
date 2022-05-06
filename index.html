@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid mb-2">
+    <div class="row mt-3">
+      <div class="col"></div>
+      <div class="col">
+        <h1 class="text-center">Basic Form</h1>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col p-3 border bg-light input-group mb-3">
+        <input type="text" placeholder="integer" class="form-control" id="input-field" />
+        <button type="button" class="btn btn-primary" id="set-button">Set Value</button>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col p-3 border bg-light btn-group">
+        <div class="col col-lg-4">
+          <button type="button" class="btn btn-secondary" id="get-button">Get Value</button>
+        </div>
+        <div class="col">
+          <p class="lead" id="results">Results here</p>
+        </div>
+
+      </div>
+      <div class="col"></div>
+    </div>
+
+  </div>
+  <script src="client.js"></script>
+</body>
+
+</html>
