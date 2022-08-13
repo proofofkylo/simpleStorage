@@ -2,3 +2,8 @@
 .vscode
 *.json
 node_modules
+*/test-ledger
+*/target
+*/debug
+*.lock
+Solana/*.so

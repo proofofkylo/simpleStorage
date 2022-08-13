@@ -1,4 +1,5 @@
 # Using web3.py with Ganache
+# NOTE: Ganache needs to be running, and a top level "private_key" value must be stored in ./ethereumConfig.json for this file to work
 # https://blog.blockmagnates.com/deploying-solidity-contract-with-python-and-ganache-4f386308b2a0
 
 """
@@ -58,7 +59,7 @@ print("ABI:", abi, "\n---------------------------------")
 from web3 import Web3
 
 # grab the config settings which have 3 keys: "private_key", "RPC", and "contracts"
-with open("./config.json", "r") as file:
+with open("./ethereumConfig.json", "r") as file:
     config = json.load(file)
 
 # connect to the blockchain
@@ -110,5 +111,5 @@ config['contracts'].append({
     "abi": abi,
     "bytecode": bytecode
     })
-with open("./config.json", "w") as file:
+with open("./ethereumConfig.json", "w") as file:
     json.dump(config, file)

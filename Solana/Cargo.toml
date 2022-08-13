@@ -1,0 +1,25 @@
+# All this needs to run with the following command!
+# cargo build-bpf --manifest-path=./Cargo.toml --bpf-out-dir=.
+# Without the -bdf tag a .sol file will not be created.
+
+# Once this has been built, it will run with: solana program deploy <name of this program>
+# That will then return a program_id which we can export as SS_PROGRAM_ID so that the deploy.py script knows what to do with it
+
+[package]
+edition = "2021"
+name = "simple_storage"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+no-entrypoint = []
+
+# Version numbers are very important. Any changes will break the build. 
+[dependencies]
+borsh = "0.9.3"
+borsh-derive = "0.9.1"
+solana-program = "~1.8.14"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "simple_storage"
